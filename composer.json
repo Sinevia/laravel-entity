@@ -1,0 +1,38 @@
+{
+    "name": "sinevia/laravel-object",
+    "type": "library",
+    "description": "Object System for Laravel (Experimental)",
+    "keywords": [
+        "Sinevia",
+        "Laravel",
+        "Object"
+    ],
+    "homepage": "https://github.com/Sinevia/Object",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Milan Lesichkov",
+            "email": "lesichkovm@gmail.com",
+            "homepage": "http://lesichkov.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sinevia\\Object\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sinevia\\Object\\ObjectServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
