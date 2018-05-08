@@ -1,3 +1,5 @@
+<?php
+
 class PackageSineviaObjectTablesCreate extends Illuminate\Database\Migrations\Migration {
 
     /**
