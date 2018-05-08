@@ -50,7 +50,7 @@ class Entity extends \AdvancedModel {
     }
 
     public static function traverseCategoryByCategoryId($category_id) {
-        $category = self::getFaqCategoryById($category_id);
+        $category = self::find($category_id);
         $travsersed = array();
         $travsersed[] = $category;
         $children = self::getChildrenByCategoryId($category_id);
