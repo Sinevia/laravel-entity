@@ -22,13 +22,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Sinevia\\Object\\": "src"
+            "Sinevia\\Entities\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Sinevia\\Object\\ObjectServiceProvider"
+                "Sinevia\\Entities\\EntitiesServiceProvider"
             ]
         }
     },
