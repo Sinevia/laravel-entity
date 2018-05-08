@@ -1,4 +1,4 @@
-class PackageSineviaCmsTablesCreate extends Illuminate\Database\Migrations\Migration {
+class PackageSineviaObjectTablesCreate extends Illuminate\Database\Migrations\Migration {
 
     /**
      * Run the migrations.
