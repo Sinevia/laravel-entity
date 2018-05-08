@@ -1,6 +1,6 @@
 <?php
 
-namespace Sinevia\Objects;
+namespace Sinevia\Entities;
 
 class Field extends \AdvancedModel {
 
