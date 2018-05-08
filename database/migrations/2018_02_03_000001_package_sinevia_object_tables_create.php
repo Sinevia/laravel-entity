@@ -8,7 +8,7 @@ class PackageSineviaObjectTablesCreate extends Illuminate\Database\Migrations\Mi
      * @return void
      */
     public function up() {
-        Sinevia\Object\Models\Object::tableCreate();
+        Sinevia\Object\Models\Entity::tableCreate();
         Sinevia\Object\Models\Field::tableCreate();
     }
 
@@ -18,7 +18,7 @@ class PackageSineviaObjectTablesCreate extends Illuminate\Database\Migrations\Mi
      * @return void
      */
     public function down() {
-        Sinevia\Object\Models\Object::tableDelete();
+        Sinevia\Object\Models\Entity::tableDelete();
         Sinevia\Object\Models\Field::tableDelete();
     }
 
