@@ -1,10 +1,10 @@
 <?php
 
-namespace Sinevia\Object;
+namespace Sinevia\Entities;
 
 use Illuminate\Support\ServiceProvider;
 
-class ObjectServiceProvider extends ServiceProvider {
+class EntitiesServiceProvider extends ServiceProvider {
 
     /**
      * Perform post-registration booting of services.
