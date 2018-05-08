@@ -40,7 +40,7 @@ class Field extends \AdvancedModel {
     }
 
     public static function tableCreate() {
-        $o = new Category;
+        $o = new self;
 
         if (\Schema::connection($o->connection)->hasTable($o->table) == true) {
             return true;
@@ -60,7 +60,7 @@ class Field extends \AdvancedModel {
     }
 
     public static function tableDelete() {
-        $o = new Category;
+        $o = new self;
         return \Schema::connection($o->connection)->dropIfExists($o->table);
     }
 
