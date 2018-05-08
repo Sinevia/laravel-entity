@@ -67,7 +67,7 @@ class Entity extends \AdvancedModel {
     }
 
     public static function getCategoryPathByCategoryId($category_id) {
-        $category = self::getFaqCategoryById($category_id);
+        $category = self::find($category_id);
         $path = array();
         $path[] = $category;
         $parent_id = $category['pid'];
@@ -77,7 +77,7 @@ class Entity extends \AdvancedModel {
     }
 
     public static function getCategoryPathAsIdsByCategoryId($category_id) {
-        $category = self::getFaqCategoryById($category_id);
+        $category = self::find($category_id);
         $path = array();
         $path[] = $category_id;
         $parent_id = $category['pid'];
@@ -88,7 +88,7 @@ class Entity extends \AdvancedModel {
     }
 
     public static function tableCreate() {
-        $o = new Category;
+        $o = new self;
 
         if (\Schema::connection($o->connection)->hasTable($o->table) == true) {
             return true;
@@ -109,7 +109,7 @@ class Entity extends \AdvancedModel {
     }
 
     public static function tableDelete() {
-        $o = new Category;
+        $o = new self;
         return \Schema::connection($o->connection)->dropIfExists($o->table);
     }
 
