@@ -1,6 +1,6 @@
 <?php
 
-namespace Sinevia\Entities;
+namespace Sinevia\Entities\Models;
 
 class Entity extends \AdvancedModel {
 
