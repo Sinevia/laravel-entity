@@ -4,7 +4,7 @@ namespace Sinevia\Objects;
 
 class Field extends \AdvancedModel {
 
-    protected $table = 'snv_objects_field';
+    protected $table = 'snv_entities_field';
     
     public function scopeObjectId($query,$objectId){
         return $query->where('ObjectId',$objectId);
