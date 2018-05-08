@@ -2,9 +2,9 @@
 
 namespace Sinevia\Objects;
 
-class Object extends \AdvancedModel {
+class Entity extends \AdvancedModel {
 
-    protected $table = 'snv_objects_object';
+    protected $table = 'snv_entities_entity';
     
     public function getField($key) {
         return Metas::get($this->Id, $key);
