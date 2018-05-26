@@ -7,11 +7,11 @@ class Entity extends \AdvancedModel {
     protected $table = 'snv_entities_entity';
     
     public function getField($key) {
-        return Metas::get($this->Id, $key);
+        return Field::get($this->Id, $key);
     }
 
     public function setField($key, $value) {
-        return Metas::set($this->Id, $key, $value);
+        return Field::set($this->Id, $key, $value);
     }
 
     public function getChildren() {
