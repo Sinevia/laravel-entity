@@ -54,7 +54,7 @@ class Field extends \AdvancedModel {
             $table->datetime('CreatedAt')->nullable()->default(null);
             $table->datetime('DeletedAt')->nullable()->default(null);
             $table->datetime('UpdatedAt')->nullable()->default(null);
-            $table->index(['ObjectId', 'Key']);
+            $table->index(['EntityId', 'Key']);
         });
         return true;
     }
