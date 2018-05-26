@@ -6,8 +6,8 @@ class Field extends \AdvancedModel {
 
     protected $table = 'snv_entities_field';
     
-    public function scopeObjectId($query,$objectId){
-        return $query->where('ObjectId',$objectId);
+    public function scopeEntityId($query,$entityId){
+        return $query->where('EntityId',$entityId);
     }
     
     public function scopeKey($query,$key){
@@ -28,7 +28,7 @@ class Field extends \AdvancedModel {
      * @param object $value
      * @return boolean
      */
-    public static function setValue($value) {
+    public function setValue($value) {
         $this->Value = json_encode($value);
         
         $isSaved = $this->save();
@@ -48,7 +48,7 @@ class Field extends \AdvancedModel {
         \Schema::connection($o->connection)->create($o->table, function (\Illuminate\Database\Schema\Blueprint $table) use ($o) {
             $table->engine = 'InnoDB';
             $table->string($o->primaryKey, 40)->primary();
-            $table->string('ObjectId', 12)->index();
+            $table->string('EntityId', 12)->index();
             $table->string('Key', 50)->index();
             $table->longtext('Value')->nullable()->default(null);
             $table->datetime('CreatedAt')->nullable()->default(null);
