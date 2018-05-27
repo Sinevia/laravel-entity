@@ -2,9 +2,9 @@
 
 namespace Sinevia\Entities\Models;
 
-class Field extends \AdvancedModel {
+class Attribute extends \AdvancedModel {
 
-    protected $table = 'snv_entities_field';
+    protected $table = 'snv_entities_attribute';
     
     public function scopeEntityId($query,$entityId){
         return $query->where('EntityId',$entityId);
