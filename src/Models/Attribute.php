@@ -48,7 +48,7 @@ class Attribute extends \AdvancedModel {
         \Schema::connection($o->connection)->create($o->table, function (\Illuminate\Database\Schema\Blueprint $table) use ($o) {
             $table->engine = 'InnoDB';
             $table->string($o->primaryKey, 40)->primary();
-            $table->string('EntityId', 12)->index();
+            $table->string('EntityId', 40)->index();
             $table->string('Key', 50)->index();
             $table->longtext('Value')->nullable()->default(null);
             $table->datetime('CreatedAt')->nullable()->default(null);
