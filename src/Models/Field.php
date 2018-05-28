@@ -14,6 +14,25 @@ class Field extends \AdvancedModel {
         return $query->where('Key',$key);
     }
     
+    public static function set($entityId,$key,$value){
+        $field = static::entityId($entityId)->key($key)->first();
+        if($field==null){
+            $field=new static;
+            $field->EntityId = $entityId;
+            $field->Key = $key;
+            $field->save();
+        }
+        return $field->setValue($value);
+    }
+    
+    public static function get($entityId,$key,$defaultValue=null){
+        $field = static::entityId($entityId)->key($key)->first();
+        if($field==null){
+            return $defaultValue;
+        }
+        return $field->getValue();
+    }
+    
     /**
      * Returns the value
      * @param type $key
