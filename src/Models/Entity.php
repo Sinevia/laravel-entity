@@ -2,15 +2,40 @@
 
 namespace Sinevia\Entities\Models;
 
-class Entity extends \AdvancedModel {
+abstract class Entity extends \AdvancedModel {
 
-    protected $table = 'snv_entities_entity';
+    protected $table = 'snv_entities_entity';    
+    public $useUniqueId = true;
+
+    abstract function getType();
+
+    public static function boot() {
+        parent::boot();
+        static::creating(function ($model) {
+            $model->Class = $model->getType();
+            return;
+        });
+    }
+
+    public function scopeFieldEquals($query, $key, $value) {
+        return $query->whereHas('fields', function($q) use($key, $value) {
+                    $q->where('Key', $key);
+                    $q->where('Value', json_encode($value));
+                });
+    }
+
+    /**
+     * Gets the fields for the entity
+     */
+    public function fields() {
+        return $this->hasMany('Sinevia\Entities\Models\Field', 'EntityId', 'Id');
+    }
     
-    public function getField($key) {
+    public function getFieldValue($key) {
         return Field::get($this->Id, $key);
     }
 
-    public function setField($key, $value) {
+    public function setFieldValue($key, $value) {
         return Field::set($this->Id, $key, $value);
     }
 
