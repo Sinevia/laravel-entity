@@ -9,7 +9,7 @@ class PackageSineviaEntitiesTablesCreate extends Illuminate\Database\Migrations\
      */
     public function up() {
         Sinevia\Entities\Models\Entity::tableCreate();
-        Sinevia\Entities\Models\Attribute::tableCreate();
+        Sinevia\Entities\Models\Field::tableCreate();
     }
 
     /**
@@ -19,7 +19,7 @@ class PackageSineviaEntitiesTablesCreate extends Illuminate\Database\Migrations\
      */
     public function down() {
         Sinevia\Entities\Models\Entity::tableDelete();
-        Sinevia\Entities\Models\Attribute::tableDelete();
+        Sinevia\Entities\Models\Field::tableDelete();
     }
 
 }
