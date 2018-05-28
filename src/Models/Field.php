@@ -2,9 +2,9 @@
 
 namespace Sinevia\Entities\Models;
 
-class Attribute extends \AdvancedModel {
+class Field extends \AdvancedModel {
 
-    protected $table = 'snv_entities_attribute';
+    protected $table = 'snv_entities_field';
     
     public function scopeEntityId($query,$entityId){
         return $query->where('EntityId',$entityId);
@@ -52,8 +52,8 @@ class Attribute extends \AdvancedModel {
             $table->string('Key', 50)->index();
             $table->longtext('Value')->nullable()->default(null);
             $table->datetime('CreatedAt')->nullable()->default(null);
+            $table->datetime('UpdatedAt')->nullable()->default(null);            
             $table->datetime('DeletedAt')->nullable()->default(null);
-            $table->datetime('UpdatedAt')->nullable()->default(null);
             $table->index(['EntityId', 'Key']);
         });
         return true;
