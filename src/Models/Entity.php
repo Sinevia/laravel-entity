@@ -97,13 +97,13 @@ class Entity extends \AdvancedModel {
             $table->engine = 'InnoDB';
             $table->string($o->primaryKey, 40)->primary();
             $table->string('Status', 12)->default('Active')->index();
-            $table->string('Class', 40)->nullable()->default('Unknown')->index();
+            $table->string('Type', 40)->nullable()->default('Unknown')->index();
             $table->string('ParentId', 40)->nullable()->default(null)->index();
             $table->integer('Position')->nullable()->default(null)->index();
             $table->string('Title', 255)->nullable()->default(null)->index();
             $table->datetime('CreatedAt')->nullable()->default(null);
-            $table->datetime('DeletedAt')->nullable()->default(null);
             $table->datetime('UpdatedAt')->nullable()->default(null);
+            $table->datetime('DeletedAt')->nullable()->default(null);            
         });
         return true;
     }
