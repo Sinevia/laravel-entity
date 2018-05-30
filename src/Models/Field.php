@@ -5,6 +5,7 @@ namespace Sinevia\Entities\Models;
 class Field extends \AdvancedModel {
 
     protected $table = 'snv_entities_field';
+    public $useUniqueId = true;
     
     public function scopeEntityId($query,$entityId){
         return $query->where('EntityId',$entityId);
