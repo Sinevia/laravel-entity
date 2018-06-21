@@ -1,5 +1,8 @@
 <?php
 class EntityNonAbstract extends Sinevia\Entities\Models\Entity{
+    public function getType(){
+        return 'EntityNonAbstract';
+    }
 }
 class PackageSineviaEntitiesTablesCreate extends Illuminate\Database\Migrations\Migration {
 
