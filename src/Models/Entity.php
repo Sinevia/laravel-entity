@@ -113,7 +113,7 @@ abstract class Entity extends \AdvancedModel {
     }
 
     public static function tableCreate() {
-        $o = new self;
+        $o = new static;
 
         if (\Schema::connection($o->connection)->hasTable($o->table) == true) {
             return true;
@@ -134,7 +134,7 @@ abstract class Entity extends \AdvancedModel {
     }
 
     public static function tableDelete() {
-        $o = new self;
+        $o = new static;
         return \Schema::connection($o->connection)->dropIfExists($o->table);
     }
 
