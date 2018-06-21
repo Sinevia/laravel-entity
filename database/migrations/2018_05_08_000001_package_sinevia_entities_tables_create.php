@@ -1,5 +1,6 @@
 <?php
-
+class EntityNonAbstract extends Sinevia\Entities\Models\Entity{
+}
 class PackageSineviaEntitiesTablesCreate extends Illuminate\Database\Migrations\Migration {
 
     /**
@@ -8,7 +9,7 @@ class PackageSineviaEntitiesTablesCreate extends Illuminate\Database\Migrations\
      * @return void
      */
     public function up() {
-        Sinevia\Entities\Models\Entity::tableCreate();
+        EntityNonAbstract::tableCreate();
         Sinevia\Entities\Models\Field::tableCreate();
     }
 
@@ -18,8 +19,8 @@ class PackageSineviaEntitiesTablesCreate extends Illuminate\Database\Migrations\
      * @return void
      */
     public function down() {
-        Sinevia\Entities\Models\Entity::tableDelete();
         Sinevia\Entities\Models\Field::tableDelete();
+        EntityNonAbstract::tableDelete();        
     }
 
 }
