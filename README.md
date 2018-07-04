@@ -5,7 +5,7 @@ A streamlined entity-attribute-value (EAV) implementation for Laravel. This pack
 ## Installation ##
 
 ```
-composer require sinevia/laravel-object
+composer require sinevia/laravel-entity
 ```
 
 ## Table Schema ##
