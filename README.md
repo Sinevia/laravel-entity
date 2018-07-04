@@ -7,7 +7,21 @@ An entity-attribute-value  (EAV) implementation for Laravel.
 | Entity    |
 |-----------|
 | Id        |
+| Status    |
+| Type      |
 | ParentId  |
+| Sequence  |
 | Name      |
 | CreatedAt |
+| DeletedAt |
 | Udated At |
+
+| Field     |
+|-----------|
+| Id        |
+| EntityId  |
+| Key       |
+| Value     |
+| CreatedAt |
+| DeletedAt |
+| UpdatedAt |
