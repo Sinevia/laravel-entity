@@ -6,7 +6,7 @@
         "Sinevia",
         "Laravel",
         "Entity",
-        "EAV",
+        "EAV"
     ],
     "homepage": "https://github.com/sinevia/entity",
     "license": "proprietary",
