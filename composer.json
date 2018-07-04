@@ -1,13 +1,14 @@
 {
-    "name": "sinevia/laravel-object",
+    "name": "sinevia/laravel-entity",
     "type": "library",
-    "description": "Object System for Laravel (Experimental)",
+    "description": "A streamlined EAV implementation for Laravel",
     "keywords": [
         "Sinevia",
         "Laravel",
-        "Object"
+        "Entity",
+        "EAV",
     ],
-    "homepage": "https://github.com/Sinevia/Object",
+    "homepage": "https://github.com/sinevia/entity",
     "license": "proprietary",
     "authors": [
         {
