@@ -1,6 +1,12 @@
 # Laravel Entity
 
-An entity-attribute-value  (EAV) implementation for Laravel.
+An entity-attribute-value (EAV) implementation for Laravel for quick "schemaless" prototyping.
+
+## Installation ##
+
+```
+composer require sinevia/laravel-object
+```
 
 ## Table Schema ##
 
