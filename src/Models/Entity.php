@@ -41,7 +41,7 @@ abstract class Entity extends \AdvancedModel {
 
     public function getChildren() {
         $result = self::where('ParentId', '=', $this->Id)
-                ->orderBy('Position', 'ASC')
+                ->orderBy('Sequence', 'ASC')
                 ->get();
         if ($result == false) {
             return array();
@@ -124,7 +124,7 @@ abstract class Entity extends \AdvancedModel {
             $table->string('Status', 12)->default('Active')->index();
             $table->string('Type', 40)->nullable()->default('Unknown')->index();
             $table->string('ParentId', 40)->nullable()->default(null)->index();
-            $table->integer('Position')->nullable()->default(null)->index();
+            $table->integer('Sequence')->nullable()->default(null)->index();
             $table->string('Title', 255)->nullable()->default(null)->index();
             $table->datetime('CreatedAt')->nullable()->default(null);
             $table->datetime('UpdatedAt')->nullable()->default(null);
