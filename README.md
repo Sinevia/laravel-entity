@@ -8,6 +8,35 @@ A streamlined entity-attribute-value (EAV) implementation for Laravel. This pack
 composer require sinevia/laravel-entity
 ```
 
+## How to Use ##
+```
+// 1. Create your model class
+class Note extends \Sinevia\Entities\Models\Entity {
+    function getType()
+    {
+        return 'note';
+    }
+}
+
+// 2. Create new instance and add fields
+$note = new Note();
+$note->save();
+$note->setFieldValue('Title','Note title');
+$note->setFieldValue('Text','Note text');
+
+// 3. Create new instance and add fields
+$note = Note::find($noteId);
+echo $note->getFieldValue('Title');
+echo $note->getFieldValue('Text');
+
+// 4. Iterate throuhh all notes
+$note = Note::all();
+foreach($notes as $note){
+    echo $note->getFieldValue('Title');
+}
+
+```
+
 ## Table Schema ##
 
 The following schema is used for the database.
