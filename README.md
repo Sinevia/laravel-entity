@@ -10,7 +10,7 @@ A streamlined entity-attribute-value (EAV) implementation for Laravel. This pack
 - Schemaless implementation with 2 database tables only.
 - Entitiies have types. Each type is like a class (i.e. note, category, etc)
 - Entitiies may have unlimited fields. Fields can have any value (string, int, float, array)
-- Entitiies may have hierarchy (parents or children). Great when you have categories
+- Entitiies may have hierarchy (parent and children). Great when you have categories, or paths
 - Ideal for quick prototyping
 
 ## Installation ##
