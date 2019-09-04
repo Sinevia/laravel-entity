@@ -12,6 +12,7 @@ A streamlined entity-attribute-value (EAV) implementation for Laravel. This pack
 - Entitiies may have unlimited fields. Fields can have any value (string, int, float, array)
 - Entitiies may have hierarchy (parent and children). Great when you have categories, or paths
 - Ideal for quick prototyping
+- Uses human friendly IDs (see https://github.com/Sinevia/php-library-uid)
 
 ## Installation ##
 
@@ -20,7 +21,8 @@ composer require sinevia/laravel-entity
 ```
 
 ## How to Use ##
-```
+
+```php
 // 1. Create your model class
 class Note extends \Sinevia\Entities\Models\Entity {
     function getType()
