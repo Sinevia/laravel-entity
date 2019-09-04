@@ -15,6 +15,11 @@ abstract class Entity extends \AdvancedModel {
             $model->Class = $model->getType();
             return;
         });
+        
+        static::deleting(function ($model) {
+            $model->fields()->delete();
+            return;
+        });
     }
 
     public function scopeFieldEquals($query, $key, $value) {
